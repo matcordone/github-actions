@@ -3,12 +3,12 @@ name: My ASCII workflow
 on: push
 
 jobs:
-    ASCII_workflow:
-        runs-on: ubuntu-latest
-        
-        steps:
-            - name: ASCII install
-              run: | 
-                sudo apt update && sudo apt install cowsay -y
-                cowsay -f dragon "El mundo va arderrr ahhhgjjj!!!!" >> dragon.txt
-                cat dragon.txt
+  ASCII_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install cowsay & generate dragon message
+        run: |
+          sudo apt update && sudo apt install cowsay -y
+          cowsay -f dragon "🔥 El mundo va arderrr ahhhgjjj!!!! 🔥" > dragon.txt
+          cat dragon.txt
