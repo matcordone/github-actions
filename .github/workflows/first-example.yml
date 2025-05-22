@@ -6,6 +6,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+        - name: Checkout
+          uses: actions/checkout@v4.2.2
+
         - name: Welcome message
           run: echo "My first Action"
         
@@ -13,9 +16,4 @@ jobs:
           run: ls
         
         - name: Read files2
-          run: |
-            if [ -f "README.md" ]; then
-              cat README.md
-            else
-              echo "README.md does not exist."
-            fi
+          run: cat README.md
