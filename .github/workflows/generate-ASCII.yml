@@ -12,7 +12,7 @@ jobs:
       
       - name: Install cowsay & generate dragon message
         run: |
-          sudo apt update && sudo apt install cowsay -y
+          sudo apt-get update && sudo apt-get install cowsay -y
           cowsay -f dragon "🔥 El mundo va arderrr ahhhgjjj!!!! 🔥" > dragon.txt
           
       - name: Dragon

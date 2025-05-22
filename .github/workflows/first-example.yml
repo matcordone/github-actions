@@ -14,8 +14,3 @@ jobs:
             echo "My first Action"
             ls -ltra
             cat README.md
-        
-        - name: Generated ASCII artwork
-          run: |
-            sudo apt-get update && sudo apt-get install cowsay -y
-            cowsay -f dragon "YO DEPLOYO INFRA CON FUEGOOO ARRRRHJJJ" >> dragon.txt
