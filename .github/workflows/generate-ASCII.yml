@@ -8,15 +8,19 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@4.2.2
-      
+        uses: actions/checkout@v4.2.2
+
       - name: Install cowsay & generate dragon message
         run: |
           sudo apt-get update && sudo apt-get install cowsay -y
           cowsay -f dragon "🔥 El mundo va arderrr ahhhgjjj!!!! 🔥" > dragon.txt
-          
-      - name: Dragon
-        run: cat dragon.txt
+          echo "--- DRAGON.TXT CREATED ---"
+          ls -l dragon.txt
+          cat dragon.txt
 
-      - name: repo-list
-        run: ls -ltra 
+      - name: Confirm dragon.txt is still here
+        run: |
+          echo "--- LS ---"
+          ls -l
+          echo "--- CONTENT ---"
+          cat dragon.txt || echo "Archivo no encontrado 😢"
