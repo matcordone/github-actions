@@ -13,4 +13,9 @@ jobs:
           run: ls
         
         - name: Read files2
-          run: cat README.md
+          run: |
+            if [ -f "README.md" ]; then
+              cat README.md
+            else
+              echo "README.md does not exist."
+            fi
