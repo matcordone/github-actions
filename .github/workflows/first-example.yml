@@ -13,4 +13,4 @@ jobs:
           run: ls
         
         - name: Read files2
-          run: cat matcordone/github-actions/README.md
+          run: cat README.md
