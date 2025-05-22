@@ -14,5 +14,9 @@ jobs:
         run: |
           sudo apt update && sudo apt install cowsay -y
           cowsay -f dragon "🔥 El mundo va arderrr ahhhgjjj!!!! 🔥" > dragon.txt
-          cat dragon.txt
-          ls -ltra
+          
+      - name: Dragon
+        run: cat dragon.txt
+
+      - name: repo-list
+        run: ls -ltra 
