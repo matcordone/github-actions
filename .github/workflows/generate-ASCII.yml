@@ -7,8 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@4.2.2
+      
       - name: Install cowsay & generate dragon message
         run: |
           sudo apt update && sudo apt install cowsay -y
           cowsay -f dragon "🔥 El mundo va arderrr ahhhgjjj!!!! 🔥" > dragon.txt
           cat dragon.txt
+          ls -ltra
